@@ -1,0 +1,19 @@
+function setEqualHeight(columns)
+{
+var tallestcolumn = 160;
+columns.each(
+function()
+{
+currentHeight = $(this).height();
+if(currentHeight > tallestcolumn)
+{
+tallestcolumn = currentHeight;
+}
+}
+);
+columns.height(tallestcolumn);
+}
+$(document).ready(function() {
+setEqualHeight($("div#footer ul"));
+});
+
